@@ -2,6 +2,8 @@
 
 ![histogram](assets/histogram.png)
 
+[Publication](insert_URL_here)
+
 ## Heading 2
 
 ### Heading 3
