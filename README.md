@@ -1,6 +1,6 @@
 # Portfolio
 
-![histogram](assets/images/histogram.png)
+![histogram](assets/histogram.png)
 
 ## Heading 2
 
