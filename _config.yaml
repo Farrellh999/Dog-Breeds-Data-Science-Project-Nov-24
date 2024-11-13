@@ -2,7 +2,7 @@
 title: "Data Science Portfolio"
 description: "Data Queen // Senior Analyst // Degree Apprentice"
 permalink: "/stories/:title"
-url: https://government.github.com
+url: 
 relative_permalinks: false
 
 # build settings
