@@ -1,5 +1,5 @@
 
-Data Science Project: Trends in Kennel Club Registrations (2013 - 2022)
+### Data Science Project: Trends in Kennel Club Registrations (2013 - 2022)
 
 
 ## Overview
