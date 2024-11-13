@@ -1,5 +1,5 @@
 title: "Data Science Portfolio"
-logo: /assets/wilmaglasses.png
+logo: <img src ="/assets/wilmaglasses.png" alt="logo" width="200" height="200">
 description: "Data Queen // Senior Analyst // Degree Apprentice"
 show_downloads: true
 theme: jekyll-theme-minimal
