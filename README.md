@@ -77,12 +77,19 @@ Are more unfriendly dogs being born each year?
 
 # Pipeline Overview
 
+## Preparing the data
+The datasets are imported into Jupyter notebooks with the pands, numpy, and matplotlib libraries imported.
 
-#### Transforming the Controls
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
+## import the datasets and identify each one
+KC_file = r'C:\Users\HannahFarrell\OneDrive - Greater Manchester GP Federations Toolkit\Desktop\Python\Apprenticeship\Assessments\DPS\kc_breed_registrations (1).csv'
+kc_data = pd.read_csv(KC_file, encoding ='ISO-8859-1')
 
-
-### Preparing the Branches Import
+CHAR_file = r'C:\Users\HannahFarrell\OneDrive - Greater Manchester GP Federations Toolkit\Desktop\Python\Apprenticeship\Assessments\DPS\dog_characteristics.csv'
+char_data = pd.read_csv(CHAR_file)
 
 
 ### Applying Business Logic
