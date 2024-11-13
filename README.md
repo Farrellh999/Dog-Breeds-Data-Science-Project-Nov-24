@@ -3,7 +3,9 @@
 
 
 ## Overview
-Dogs are notoriously know as man's best friend, with the vast displays on social media of 'doggos' further illustrating this point. However, with the emergence of social media, in addition to the displays of love and affection these animals bring, it is becoming more common to bare witness to the public debates surrounding the ethics of dog breeding, with a particular focus on breed groups such as the brachycephalic breeds. The publicly sourced dataset provides the data on litters of dogs registered with the UK Kennel Club between 2013 and 2022.
+
+
+The publicly sourced dataset provides the data on litters of dogs registered with the UK Kennel Club between 2013 and 2022.
 ### Positive Impact
 
 
@@ -59,7 +61,7 @@ Dogs are notoriously know as man's best friend, with the vast displays on social
 
 
 # Project Background
-
+Dogs are notoriously know as man's best friend, with the vast displays on social media of 'doggos' further illustrating this point. However, with the emergence of social media, in addition to the displays of love and affection these animals bring, it is becoming more common to bare witness to the public debates surrounding the ethics of dog breeding, with a particular focus on the brachycephalic breeds.
 
 # Project Summary
 
