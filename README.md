@@ -4,7 +4,7 @@ Data Science Project: Trends in Kennel Club Registrations (2013 - 2022)
 
 ## Overview
 
-This project uses time series analysis to observe trends in the number of dog litters registered with the UK Kennel Club (KC) between the period 2013 and 2022, in combination with information on their brachycephalic classification, to ascertain trends in breed numbers for brachycephalic dogs who commonly experience a multitude of health problems.
+This project uses two publicly available datasets to observe the trends different dogs being bred, according to Kennel Club registered litters, friendliness rating, and health issues risk.
 
 ### Positive Impact
 
@@ -63,33 +63,20 @@ This project uses time series analysis to observe trends in the number of dog li
 
 
 # Project Background
-Dogs are notoriously know as man's best friend, with the vast displays on social media of 'doggos' further illustrating this point. However, with the emergence of social media, in addition to the displays of love and affection these animals bring, it is becoming more common to bare witness to the public debates surrounding the ethics of dog breeding, with a particular focus on the brachycephalic breeds.
+Dogs are notoriously know as man's best friend, with the vast displays on social media of 'doggos' further illustrating this point. However, with the emergence of social media, in addition to the displays of love and affection these animals bring, it is becoming more common to bare witness to the public debates surrounding the ethics of dog breeding, dog ownership, and the seeming rise in dog attacks.
 
 # Project Summary
 
-## Issue at Hand
-
-
+## Question
+Are more unfriendly dogs being born each year?
 
 ## Solution
-
-
 
 ## Outcome
 
 
-
 # Pipeline Overview
 
-## A High Level Look at the Pipeline
-
-## A Deeper Dive Into the Pipeline
-
-### Desired Output Structure
-
-
-
-### Ingesting Data from Google Sheets
 
 #### Transforming the Controls
 
