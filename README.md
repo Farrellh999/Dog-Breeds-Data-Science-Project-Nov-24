@@ -136,6 +136,10 @@ merged_data.info()
 from IPython.display import display
 display(merged_data)
 
+## View the merged dataset
+from IPython.display import display
+display(merged_data)
+
 ### Applying Business Logic
 
 
