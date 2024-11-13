@@ -2,10 +2,4 @@ title: Data Science Portfolio
 logo: wilmaglasses.png
 description: Data Queen // Senior Analyst // Degree Apprentice
 show_downloads: false
-remote_theme: pages-themes/tactile@v0.2.0
-
-cd centrarium
-
-gem install bundler
-
-bundle install
+theme: jekyll-theme-minimal
