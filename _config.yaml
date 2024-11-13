@@ -4,6 +4,7 @@ description: "Data Queen // Senior Analyst // Degree Apprentice"
 permalink: "/stories/:title"
 url: 
 relative_permalinks: false
+theme: jekyll-theme-minimal
 
 # build settings
 exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules"]
