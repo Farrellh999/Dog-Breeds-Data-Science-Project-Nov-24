@@ -1,11 +1,11 @@
 
-# Impact Evaluation: Trends in Kennel Club Registrations (2013 - 2023)
+# Impact Evaluation: Trends in Kennel Club Registrations (2013 - 2022)
 
 
 ## Overview
 
+This project uses time series analysis to observe trends in the number of dog litters registered with the UK Kennel Club (KC) between the period 2013 and 2022, in combination with information on their brachycephalic classification, to ascertain trends in breed numbers for brachycephalic dogs who commonly experience a multitude of health problems.
 
-The publicly sourced dataset provides the data on litters of dogs registered with the UK Kennel Club between 2013 and 2022.
 ### Positive Impact
 
 
