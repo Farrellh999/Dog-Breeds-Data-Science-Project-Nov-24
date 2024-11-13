@@ -1,9 +1,9 @@
 
-# Impact Evaluation: Data Engineering Project (2023)
+# Impact Evaluation: Kennel Club Registrations (2023)
 
 
 ## Overview
-
+Dogs are notoriously know as man's best friend, with the vast displays on social media of 'doggos' further illustrating this point. However, with the emergence of social media, in addition to the displays of love and affection these animals bring, it is becoming more common to bare witness to the public debates surrounding the ethics of dog breeding, with a particular focus on breed groups such as the brachycephalic breeds. The publicly sourced dataset provides the data on litters of dogs registered with the UK Kennel Club between 2013 and 2022.
 ### Positive Impact
 
 
@@ -84,27 +84,6 @@
 ### Desired Output Structure
 
 
-
-| Output Column              | Source Type      | Source Table(s)                                                   | Noteable Column(s)                    |
-|----------------------------|------------------|-------------------------------------------------------------------|---------------------------------------|
-| branchkey                  | Application Data | branches                                                          | branchkey                             |
-| branchid                   | Application Data | branches                                                          | branchid                              |
-| branch                     | Application Data | branches                                                          | branch_name                           |
-| cabinet_meterage           | User Input       | gsheet_branches                                                   | cabinet_meterage                      |
-| shop_floor_shelf_count     | User Input       | gsheet_branches                                                   | shop_floor_shelf_count                |
-| treat as new               | User Input       | gsheet_branches                                                   | treat as new                          |
-| cabinet_multiplier         | Calculated       | gsheet_branches                                                   | cabinet_meterage                      |
-| media_multiplier           | Calculated       | gsheet_branches                                                   | shop_floor shelf_count                |
-| category_id                | Application Data | category                                                          | category_id                           |
-| box_category               | Application Data | category                                                          | box_category                          |
-| category_location          | User Input       | gsheet_category_types                                             | category_location                     |
-| total stock                | Calculated       | aio_fact                                                          | quantity                              |
-| average_stock_per_location | Calculated       | aio_fact, gsheet_branches                                         | quantity                              |
-| minimum_capacity           | Calculated       | aio_fact, gsheet_branches, gsheet_controls                        | quantity, minimum_capacity_percentage |
-| maximum_capacity           | Calculated       | aio_fact, gsheet_branches, gsheet_controls                        | quantity, maximum_capacity_percentage |
-| capacity_ratio             | Calculated       | aio_fact, gsheet_branches, gsheet_controls, gsheet_category_types |                                       |
-| raw cap                    | Calculated       | aio_fact, gsheet_branches, gsheet_controls, gsheet_category_types |                                       |
-| new_capacity               | Calculated       | aio_fact, gsheet_branches, gsheet_controls, gsheet_category_types |                                       |
 
 ### Ingesting Data from Google Sheets
 
