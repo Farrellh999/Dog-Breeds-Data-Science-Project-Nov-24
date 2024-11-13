@@ -1,6 +1,6 @@
 # global settings
-title: "GitHub and Government"
-description: "GitHub helps government build software better, together"
+title: "Data Science Portfolio"
+description: "Data Queen // Senior Analyst // Degree Apprentice"
 permalink: "/stories/:title"
 url: https://government.github.com
 relative_permalinks: false
