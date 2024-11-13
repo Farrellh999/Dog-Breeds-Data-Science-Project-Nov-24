@@ -23,6 +23,8 @@ The publicly sourced dataset provides the data on litters of dogs registered wit
 
 [Introduction](#introduction)
 
+[Project Background](#project-background)
+
 [Project Summary](#project-summary)
 
 [Issue at Hand](#issue-at-hand)
