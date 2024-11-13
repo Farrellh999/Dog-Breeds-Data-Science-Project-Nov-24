@@ -3,9 +3,9 @@ logo: wilmaglasses.png
 description: Data Queen // Senior Analyst // Degree Apprentice
 show_downloads: false
 remote_theme: pages-themes/tactile@v0.2.0
-# cd into project directory
+
 cd centrarium
-# install Bundler if you don't have it already
+
 gem install bundler
-# install jekyll, jekyll-archives, jekyll-sitemap, and jekyll-paginate
+
 bundle install
