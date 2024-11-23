@@ -4,12 +4,13 @@
 
 ## Overview
 
-This project uses two publicly available datasets to observe the trends different dogs being bred, according to Kennel Club registered litters, friendliness rating, and health issues risk.
+This project uses a publicly available dataset which examines each dog breed, providing scores on popularity, size, intelligence, suitability for children (score for kids), lifetime cost, intelligence, longevisty, genetic ailments, purchase price, annual food costs, and grooming frequency. I wish to observe the relationship between popularity and congenital ailments.
 
 ### Positive Impact
-
+Better owner education, promotion of healthy breeding etc.
 
 ### Negative Impact
+Public perception and opinion, breeds becoming extinct.
 
 ## Conclusion
 
@@ -25,12 +26,12 @@ This project uses two publicly available datasets to observe the trends differen
 [Project Background](#project-background)
 
 # Project Background
-Dogs are notoriously know as man's best friend, with the vast displays on social media of 'doggos' further illustrating this point. However, with the emergence of social media, in addition to the displays of love and affection these animals bring, it is becoming more common to bare witness to the public debates surrounding the ethics of dog breeding, dog ownership, and the seeming rise in dog attacks.
+Dogs are notoriously know as man's best friend, with the vast displays on social media of 'doggos' further illustrating this point. However, with the emergence of social media, in addition to the displays of love and affection these animals bring, it is becoming more common to bare witness to the public debates surrounding the ethics of dog breeding and the health of certain dog breeds. This project aims to examine the relationship between popularity ranking and the number of genetic ailments. 
 
 # Project Summary
 
 ## Question
-Are more unfriendly dogs being born each year?
+Are dogs with more genetic ailments becoming more popular?
 
 ## Solution
 
@@ -38,18 +39,21 @@ Are more unfriendly dogs being born each year?
 
 
 # Preparing the data
-The datasets are imported into Jupyter notebooks with the pands, numpy, and matplotlib libraries imported.
+The datasets are imported into Jupyter notebooks with the pandas, numpy, and matplotlib libraries imported.
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
 ### import the datasets and identify each one
-KC_file = r'C:\Users\HannahFarrell\OneDrive - Greater Manchester GP Federations Toolkit\Desktop\Python\Apprenticeship\Assessments\DPS\kc_breed_registrations (1).csv'
-kc_data = pd.read_csv(KC_file, encoding ='ISO-8859-1')
+dogs_file = r'C:\Users\HannahFarrell\Greater Manchester GP Federations Toolkit\GMTHFiles - Documents\GM Training Hub\Information Analysis\.ipynb_checkpoints\dogs-ranking-dataset.csv'
+dogs_data= pd.read_csv(dogs_file)
 
-CHAR_file = r'C:\Users\HannahFarrell\OneDrive - Greater Manchester GP Federations Toolkit\Desktop\Python\Apprenticeship\Assessments\DPS\dog_characteristics.csv'
-char_data = pd.read_csv(CHAR_file)
+## Check the top 5 rows of the table
+dogs_data.head()
+
+![image](https://github.com/user-attachments/assets/96048de0-e306-47bf-9d9a-8a804dd34e15)
+
 
 ### Check for null values and types of data
 kc_data.info()
