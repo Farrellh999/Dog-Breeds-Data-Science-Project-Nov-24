@@ -53,58 +53,59 @@ dogs_data= pd.read_csv(dogs_file)
 dogs_data.head()
 
 ![image](https://github.com/user-attachments/assets/96048de0-e306-47bf-9d9a-8a804dd34e15)
+# The data appears to have imported correctly.
+
+## See an overview of the data
+
+dogs_data.info()
+![image](https://github.com/user-attachments/assets/51af1835-6374-460d-ad41-1670de7a30be)
+All data appears to be of an appropriate data type. For this project we will be focusing on the columns: popularity ranking, and number of genetic ailments.
+
+## Observe the summary statistics of the data
+print(dogs_data.describe())
+![image](https://github.com/user-attachments/assets/6bbd1fb4-3ed2-47c7-aeba-f00cb4537a35)
+
+## Observe popularity ranking by type category
+sns.boxplot(x='type', y='popularity ranking',data=dogs_data)
+plt.xticks(rotation = 45) # rotate the x labels to improve visibility
+plt.show()
+
+![image](https://github.com/user-attachments/assets/9ddd84e4-7b45-4d1b-88ee-5dcc9142b1bc)
 
 
-### Check for null values and types of data
-kc_data.info()
 
-### Remove commas from numerical data and convert to int.64
+## Choose the specific columns to analyse
 
-kc_columns_to_convert = ['2013','2014','2015','2016','2017','2018','2019','2020','2021','2022']
-kc_data[kc_columns_to_convert] = kc_data[kc_columns_to_convert].replace({',':''},regex=True).astype(int)
-kc_data.info()
+selected_columns = dogs_data[['popularity ranking','NUMBER OF GENETIC AILMENTS']]
+print(selected_columns.head())
 
-## Check for null values and types of data
-char_data.info()
+![image](https://github.com/user-attachments/assets/321054c1-ce2a-4c4a-89b7-428d0b3e06aa)
 
-## Remove commas from numerical data and convert to int.64
+### Check for null values
+null_counts = selected_columns.isnull().sum()
+print(null_counts)
 
-char_data_to_convert = ['Average Weight (kg)']
-char_data[char_data_to_convert] = char_data[char_data_to_convert].astype(float)
+![image](https://github.com/user-attachments/assets/d4d08d8b-74c8-49bf-9752-afb466ff633b)
 
-### we have identified a record with an incontangible value for weight. This must be assumed to be an error and as we are unable to check this value with the original source of the data, on this occasion we will delete the record and highlight as a limitation.
+## Observe the summary statistics of the data
+print(selected_columns.describe())
+![image](https://github.com/user-attachments/assets/97cbc5fb-6791-4bb2-835e-8c16350528c3)
+This identifies that there are 87 records, indicating the 87 different dog breeds. The average number of genetic ailments is 1.69; some breeds have zero and other breeds have up to 9 genetic ailments.
 
-char_data = char_data[char_data['Average Weight (kg)'] != '25-Jul']
-char_data_to_convert = ['Average Weight (kg)']
-char_data[char_data_to_convert] = char_data[char_data_to_convert].astype(float)
-char_data.info()
+## Analyse the distribution of the data
+selected_columns.hist(figsize=(10,8), bins=20)
+plt.show()
+![image](https://github.com/user-attachments/assets/303a2a9a-ebb0-4009-b3c8-7d295ae13809)
+The histogram reveals that most dogs have only 1 genetic ailment. But how popular is this breed?
 
-## the plan is to merge the two datasets using the "breed" column as the key. Therefore need to check that there are no trailing spaces/extra spaces in the key column of each dataset.
-kc_data['Extra_Spaces'] = kc_data['Breed'] != kc_data['Breed'].str.strip()
-print(kc_data['Extra_Spaces'].any())
-True
+## Observe the distribution of the data in a scattergraph
+sns.scatterplot(x='NUMBER OF GENETIC AILMENTS', y = 'popularity ranking', data = selected_columns)
+plt.show()
+![image](https://github.com/user-attachments/assets/f691ace7-f398-4ebd-9315-e091e119a135)
+The scattergraph identifies that there is a high concentration of breeds who have 0 - 1 genetic ailments who also score high in popularity ranking. However, there are still a sizeable number of breeds with a high population ranking with more than 1 genetic ailment. 
 
-### Remove the trailing spaces/extra spaces
-kc_data['Breed']= kc_data['Breed'].str.strip()
-
-### Check the second dataset for extra spaces/trailing spaces in the "breed" column
-char_data['Extra_Spaces'] = char_data['Breed'] != char_data['Breed'].str.strip()
-print(char_data['Extra_Spaces'].any())
-False
-
-### perform the merge. There are unequal numbers of breeds in the datasets. Therefore an inner join is used.
-merged_data = pd.merge(kc_data, char_data, on='Breed', how='inner')
-
-### Check the merged metadata
-merged_data.info()
-
-### View the merged dataset
-from IPython.display import display
-display(merged_data)
-
-### View the merged dataset
-from IPython.display import display
-display(merged_data)
+## Identify the variables
+The dependent variable is the popularity ranking of the dog breed. The independent variable is the number of genetic ailments. I.e., we wish to explore how the popularity of a dog breed is influenced by it's number of genetic ailments.
 
 ### Applying Business Logic
 
