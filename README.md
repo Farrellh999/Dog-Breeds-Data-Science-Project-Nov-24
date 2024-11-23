@@ -52,14 +52,14 @@ dogs_data= pd.read_csv(dogs_file)
 ## Check the top 5 rows of the table
 dogs_data.head()  
 
-![image](https://github.com/user-attachments/assets/96048de0-e306-47bf-9d9a-8a804dd34e15)
-# The data appears to have imported correctly.
+![image](https://github.com/user-attachments/assets/96048de0-e306-47bf-9d9a-8a804dd34e15)  
+The data appears to have imported correctly.
 
 ## See an overview of the data
 
 dogs_data.info()  
 ![image](https://github.com/user-attachments/assets/51af1835-6374-460d-ad41-1670de7a30be)  
-All data appears to be of an appropriate data type. For this project we will be focusing on the columns: popularity ranking, and number of genetic ailments.
+All data appears to be of an appropriate data type. 
 
 ## Observe the summary statistics of the data
 print(dogs_data.describe())  
@@ -73,9 +73,8 @@ plt.show()
 ![image](https://github.com/user-attachments/assets/9ddd84e4-7b45-4d1b-88ee-5dcc9142b1bc)
 
 
-
 ## Choose the specific columns to analyse
-
+For this project we will be focusing on the columns: popularity ranking, and number of genetic ailments.  
 selected_columns = dogs_data[['popularity ranking','NUMBER OF GENETIC AILMENTS']]  
 print(selected_columns.head())  
 
@@ -106,6 +105,15 @@ The scattergraph identifies that there is a high concentration of breeds who hav
 
 ## Identify the variables
 The dependent variable is the popularity ranking of the dog breed. The independent variable is the number of genetic ailments. I.e., we wish to explore how the popularity of a dog breed is influenced by it's number of genetic ailments.
+
+## Split the data into test and training groups
+from sklearn.model_selection import train_test_split  
+
+x = selected_columns['NUMBER OF GENETIC AILMENTS']  
+y = selected_columns['popularity ranking']  
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state=42)  
+
+
 
 ### Applying Business Logic
 
