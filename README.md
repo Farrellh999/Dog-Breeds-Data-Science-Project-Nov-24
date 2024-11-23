@@ -38,7 +38,7 @@ Are dogs with more genetic ailments becoming more popular?
 ## Outcome
 
 
-# Preparing the data
+## Preparing the data
 The datasets are imported into Jupyter notebooks with the pandas, numpy, and matplotlib libraries imported.
 
 import pandas as pd  
@@ -49,23 +49,23 @@ import matplotlib.pyplot as plt
 dogs_file = r'C:\Users\HannahFarrell\Greater Manchester GP Federations Toolkit\GMTHFiles - Documents\GM Training Hub\Information Analysis\.ipynb_checkpoints\dogs-ranking-dataset.csv'
 dogs_data= pd.read_csv(dogs_file)
 
-## Check the top 5 rows of the table
+### Check the top 5 rows of the table
 dogs_data.head()  
 
 ![image](https://github.com/user-attachments/assets/96048de0-e306-47bf-9d9a-8a804dd34e15)  
 The data appears to have imported correctly.
 
-## See an overview of the data
+### See an overview of the data
 
 dogs_data.info()  
 ![image](https://github.com/user-attachments/assets/51af1835-6374-460d-ad41-1670de7a30be)  
 All data appears to be of an appropriate data type. 
 
-## Observe the summary statistics of the data
+### Observe the summary statistics of the data
 print(dogs_data.describe())  
 ![image](https://github.com/user-attachments/assets/6bbd1fb4-3ed2-47c7-aeba-f00cb4537a35)
 
-## Observe popularity ranking by type category
+### Observe popularity ranking by type category
 sns.boxplot(x='type', y='popularity ranking',data=dogs_data)  
 plt.xticks(rotation = 45) # rotate the x labels to improve visibility  
 plt.show()  
@@ -73,7 +73,7 @@ plt.show()
 ![image](https://github.com/user-attachments/assets/9ddd84e4-7b45-4d1b-88ee-5dcc9142b1bc)
 
 
-## Choose the specific columns to analyse
+### Choose the specific columns to analyse
 For this project we will be focusing on the columns: popularity ranking, and number of genetic ailments.  
 selected_columns = dogs_data[['popularity ranking','NUMBER OF GENETIC AILMENTS']]  
 print(selected_columns.head())  
@@ -86,33 +86,36 @@ print(null_counts)
 
 ![image](https://github.com/user-attachments/assets/d4d08d8b-74c8-49bf-9752-afb466ff633b)
 
-## Observe the summary statistics of the data
+## Explore the Data
+### Observe the summary statistics of the data
 print(selected_columns.describe())  
 ![image](https://github.com/user-attachments/assets/97cbc5fb-6791-4bb2-835e-8c16350528c3)  
 This identifies that there are 87 records, indicating the 87 different dog breeds. The average number of genetic ailments is 1.69; some breeds have zero and other breeds have up to 9 genetic ailments.
 
-## Analyse the distribution of the data
+### Analyse the distribution of the data
 selected_columns.hist(figsize=(10,8), bins=20)  
 plt.show()  
 ![image](https://github.com/user-attachments/assets/303a2a9a-ebb0-4009-b3c8-7d295ae13809)  
 The histogram reveals that most dogs have only 1 genetic ailment. But how popular is this breed?
 
-## Observe the distribution of the data in a scattergraph
+### Observe the distribution of the data in a scattergraph
 sns.scatterplot(x='NUMBER OF GENETIC AILMENTS', y = 'popularity ranking', data = selected_columns)  
 plt.show()  
 ![image](https://github.com/user-attachments/assets/f691ace7-f398-4ebd-9315-e091e119a135)  
 The scattergraph identifies that there is a high concentration of breeds who have 0 - 1 genetic ailments who also score high in popularity ranking. However, there are still a sizeable number of breeds with a high population ranking with more than 1 genetic ailment. 
 
-## Identify the variables
+## Train the Model
+### Identify the variables
 The dependent variable is the popularity ranking of the dog breed. The independent variable is the number of genetic ailments. I.e., we wish to explore how the popularity of a dog breed is influenced by it's number of genetic ailments.
 
-## Split the data into test and training groups
+### Split the data into test and training groups
 from sklearn.model_selection import train_test_split  
 
 x = selected_columns['NUMBER OF GENETIC AILMENTS']  
 y = selected_columns['popularity ranking']  
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state=42)  
 
+## Apply the Model
 
 
 ### Applying Business Logic
