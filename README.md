@@ -41,9 +41,9 @@ Are dogs with more genetic ailments becoming more popular?
 # Preparing the data
 The datasets are imported into Jupyter notebooks with the pandas, numpy, and matplotlib libraries imported.
 
-import pandas as pd__
-import numpy as np__
-import matplotlib.pyplot as plt__
+import pandas as pd  
+import numpy as np  
+import matplotlib.pyplot as plt  
 
 ### import the datasets and identify each one
 dogs_file = r'C:\Users\HannahFarrell\Greater Manchester GP Federations Toolkit\GMTHFiles - Documents\GM Training Hub\Information Analysis\.ipynb_checkpoints\dogs-ranking-dataset.csv'
