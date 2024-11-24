@@ -7,7 +7,7 @@
 This project uses a publicly available dataset which examines each dog breed, providing scores on popularity, size, intelligence, suitability for children (score for kids), lifetime cost, intelligence, longevisty, genetic ailments, purchase price, annual food costs, and grooming frequency. I wish to examine if there is a relationship between the number of genetic ailments commonly associated with the breed and the popularity of said breed.
 
 ### Positive Impact
-Better owner education, promotion of healthy breeding etc.
+
 
 ### Negative Impact
 Public perception and opinion, breeds becoming extinct.
@@ -18,6 +18,7 @@ Public perception and opinion, breeds becoming extinct.
 
 
 # Data Sources
+The dataset can be found at https://www.kaggle.com/datasets/jainaru/dog-breeds-ranking-best-to-worst. This a public dataset, readily available to download to anyone who has a free Kaggle account.
 
 # Contents
 
@@ -27,6 +28,14 @@ Public perception and opinion, breeds becoming extinct.
 
 # Project Background
 Dogs are notoriously know as man's best friend, with the vast displays on social media of 'doggos' further illustrating this point. However, with the emergence of social media, in addition to the displays of love and affection these animals bring, it is becoming more common to bare witness to the public debates surrounding the ethics of dog breeding and the health of certain dog breeds. This project aims to examine the relationship between popularity ranking and the number of genetic ailments. 
+
+If there is a positive relationship between the number of genetic ailments and popularity, this could raise an issue surrounding more dogs being born with a higher risk of illness, and therefore it could open up discussion surrounding the drivers for owning such dogs and exploring owner knowledge of the breeds and potential health ailments.
+
+If there is a negative relationship between the number of genetic ailments and popularing, this could indicate that knowledge surrounding dog health is widely understood in the public and people are actively considering avoiding owning dogs with certain genetic ailments.
+
+If no relationship is discovered, then it indicates that either:
+* The public have little awareness of genetic ailments in dog breeds; or
+* The public do not hold the possibility of genetic ailments as a strong enough deterrent to buying certain dog breeds.
 
 # Project Summary
 
