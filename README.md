@@ -4,7 +4,7 @@
 
 ## Overview
 
-This project uses a publicly available dataset which examines each dog breed, providing scores on popularity, size, intelligence, suitability for children (score for kids), lifetime cost, intelligence, longevisty, genetic ailments, purchase price, annual food costs, and grooming frequency. I wish to observe the relationship between popularity and congenital ailments.
+This project uses a publicly available dataset which examines each dog breed, providing scores on popularity, size, intelligence, suitability for children (score for kids), lifetime cost, intelligence, longevisty, genetic ailments, purchase price, annual food costs, and grooming frequency. I wish to examine if there is a relationship between the number of genetic ailments commonly associated with the breed and the popularity of said breed.
 
 ### Positive Impact
 Better owner education, promotion of healthy breeding etc.
