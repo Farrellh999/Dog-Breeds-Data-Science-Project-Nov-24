@@ -1,5 +1,5 @@
 
-### Data Science Project: Dog Breed Popularity vs Genetic Ailments
+# Data Science Project: Dog Breed Popularity vs Genetic Ailments
 
 
 ## Overview
