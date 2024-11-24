@@ -4,7 +4,7 @@
 
 ## Overview
 
-This project uses a publicly available dataset which examines each dog breed, providing scores on popularity, size, intelligence, suitability for children (score for kids), lifetime cost, intelligence, longevisty, genetic ailments, purchase price, annual food costs, and grooming frequency. I wish to examine if there is a relationship between the number of genetic ailments commonly associated with the breed and the popularity of said breed.
+This project uses a publicly available dataset which examines each dog breed, providing scores on popularity, size, intelligence, suitability for children (score for kids), lifetime cost, intelligence, longevisty, genetic ailments, purchase price, annual food costs, and grooming frequency. I wish to use a linear regression model to examine if there is a relationship between the number of genetic ailments commonly associated with the breed and the popularity of said breed.
 
 ### Positive Impact
 
@@ -62,13 +62,19 @@ dogs_data= pd.read_csv(dogs_file)
 dogs_data.head()  
 
 ![image](https://github.com/user-attachments/assets/96048de0-e306-47bf-9d9a-8a804dd34e15)  
+
 The data appears to have imported correctly.
 
-### See an overview of the data
+### Check Data Quality
 
 dogs_data.info()  
 ![image](https://github.com/user-attachments/assets/51af1835-6374-460d-ad41-1670de7a30be)  
-All data appears to be of an appropriate data type. 
+
+There are a few categories which will require the data type changing if we decide to perform analysis on them e.g., lifetime cost, food costs per year. 
+
+The dataset is completed, with no columns containing null values. All columns are present. 
+
+There are several spelling errors within the column headers to be mindful of, and consider renaming.
 
 ### Observe the summary statistics of the data
 print(dogs_data.describe())  
